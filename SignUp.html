@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SunCafe</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+       <script type="text/javascript">
+        function validateForm(){
+           
+            if(document.form1.email.value=="" || document.form1.fname.value=="" || document.form1.lname.value=="" || document.form1.password.value=="" || document.form1.confirmpassword.value=="" || document.form1.number.value==""){
+                alert("Please fill in all the information");
+                return false;
+            }
+            if(document.form1.email.value!=""){
+                if(document.form1.email.value.indexOf("@")==-1 || document.form1.email.value.indexOf(".")==-1 || document.form1.email.value.indexOf(" ")==1 || document.form1.email.value.length <6 ){
+                    alert("Please enter a valid email address");
+                    document.form1.email.focus();
+                    return false;
+                }
+            }
+            if (document.form1.password.value!='' && document.form1.confirmpassword.value!='' ){
+                if(document.form1.password.value != document.form1.confirmpassword.value){
+                    alert("Please enter the same password");
+                    document.form1.password.focus();
+                    return false;
+                   }
+            }
+            return (true);
+        }
+        
+        
+    </script>   
+  </head>
+
+  <body>
+       
+
+    <div class="container1">
+      <div id="nav">
+        <ul>  
+       <li><img src="Picture\Logo.png" alt="Logo" id="logo"></li>
+	   <li class="underlined"><a href="homepage.html">Home</a></li>
+	   <li class="underlined"><a href="menu.html">Menu</a></li>
+	   <li class="underlined"><a href="ContactUs.html">Contact us</a></li>
+       <li class="underlined"><a href="Login.html">Rate Us</a></li>
+	   <li class="underlined"><a href="SignUp.html">Sign Up</a></li>	
+        
+        </ul>
+      </div>
+    </div>
+
+    <div class="lines"></div> 
+
+    <form name="form1" method="post" action="confirmation.html" onsubmit="return (validateForm());">
+      
+            <h2 >Sign Up to rate our services!</h2>
+            <h4 >It's free and will always be!</h4>
+            <table id="table1" border="0">
+            <tr >
+                <td align="right">First name:</td>
+                <td><input class="input" type=“text” name=“fname” id=“fname” placeholder="First name" size="35" required></td>
+                <td align="right">Last name:</td>
+                <td><input class="input" type=“text” name=“lname” id=“lname” placeholder="Last name" size="35" required></td> 
+            </tr> 
+            <tr >
+                <td align="right">Email:</td>
+                <td colspan="3"><input class="input" type=“email” name=“email” id=“email” size="112" placeholder="Email" required></td>
+            </tr>
+            <tr >
+                <td align="right">Phone number:</td>
+                <td colspan="3"><input class="input" type="text" name="number" placeholder="Phone Number" size="112" required></td>
+            </tr>
+            <tr >
+                <td align="right">New Password:</td>
+                <td colspan="3"><input class="input" type="text" name="password" placeholder="New password" size="112" required></td> 
+            </tr>
+            <tr >
+                <td align="right">Confirm Password:</td>
+                <td colspan="3"><input class="input" type="text" name="confirmpassword" placeholder="Re-enter password" size="112" required></td>
+            </tr>
+            </table>
+        
+        <button id="btnform" type="submit" onclick="submit"> CREATE ACCOUNT </button>
+        
+    </form>
+
+    <div class="return-to-top-page">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+      <script>
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  document.getElementById("myBtn").style.display = "block";
+              } else {
+                  document.getElementById("myBtn").style.display = "none";
+              }
+          }
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+          }
+      </script>
+  </div>
+
+    <div id="bottom">
+       <div id="pagelinks">
+       <h>Find us on:</h>      
+<a href="https://twitter.com/SunCafe4"><img src="Picture\Twitter.png" style="width:32px;height:25px"></a>
+       
+<a href="https://www.instagram.com/suncafe_/"><img src="Picture\Instagram.png" style="width:28px;height:28px"></a>
+       
+<a href="https://www.facebook.com/yong.chern.790" target="_blank"><img src="Picture\Facebook.png" style="width:29px;height:29px"></a>
+       
+       </div>
+       <footer><p>One is never enough. Order more now!</p></footer>
+    </div>
+
+  </body>
+</html>

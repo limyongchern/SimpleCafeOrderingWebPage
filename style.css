@@ -1,0 +1,889 @@
+/************************** Design **************************/
+
+html,body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
+}
+
+.lines{
+    background-color: black;
+    height: 30px;
+    width: 100%;
+}
+
+#logo{
+    width: 210px;
+    height: 130px;
+}
+
+.container1{
+    background: linear-gradient(to bottom, #696969, #787878, #888888, #989998, #a9a9a9, #a9a9ab, #a9a8ac, #a8a8ae, #9597a1, #808793, #6a7786, #546878);
+    height: 120px;
+    max-width: 100%;
+    margin-top:0px;
+    overflow: scroll;
+}
+
+#nav{
+    font-size: 1.1em;
+    margin-top: -24px;
+    margin-left: -15px;
+    position: relative;
+}
+
+#nav ul{
+    list-style-type: none;
+}
+
+#nav li{
+    float: left;
+    
+}
+
+#nav li a{
+    display: block;
+    padding: 10px 13px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.underlined{
+    text-decoration: none;
+    padding: 40px;
+    padding-top:20px;
+    font-size: 120%;
+}
+
+.underlined:hover{
+    color: white;
+    background-color: #546878;
+    text-decoration: none;
+    height: 70px;
+}
+
+#nav li a:active{
+    background-color:#546878;
+    color:black;
+    text-decoration: none;
+}
+
+#nav li a:hover{
+    color: black;
+    background-color: #546878;
+    text-decoration: none;
+}
+
+
+#bottom{
+    background: #222;
+	border-top: 1px solid #f9f9f9;
+    height: 70px;
+    width: 100%;
+    color: white;
+}
+
+#bottom h{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+    position: relative;
+    left: 0px;
+    top: 13.5px;
+}
+
+#pagelinks a{
+    position: relative;
+    left: 0px;
+    top: 22px;
+    margin: 1px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 3em;
+  height: 2.8em;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 5px 1px rgba(0,0,0,.12), 0 5px 5px 1px rgba(0,0,0,.24);
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  color: blue;
+  position: fixed;
+  bottom: 4.2%;
+}
+
+footer{
+    font-size: 12px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    left: 0px;
+    top: -15px;
+}
+
+footer p {
+    margin-right: 105px;
+    margin-top: 15px;
+}
+
+
+
+/************************** Homepage **************************/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slides-header {
+    position: relative;
+    display: block;
+    float: right;
+    width: 32%;
+    color: white;
+    background-color: #546878;
+}
+
+.slides-header h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides-info-1 {
+    float: right;
+    display: block;
+    position: relative;
+    bottom: 537px;
+    border-top: 1px solid white;
+    width: 32%;
+    height: 532px;
+    color: #eee;
+    background-color: #222;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+.mySlides-info-1 h2 {
+    padding: 10px 30px 0 30px;
+    text-underline-position: under;
+    font-family: Arial;
+    font-size: 1.3em;
+}
+
+.mySlides-info-1 h4 {
+    padding: 10px 30px 20px 30px;
+    margin-top: 40px;
+    text-align: justify;
+    font-weight: 100;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.mySlides-info-1 h5 {
+    padding: 10px 30px 0px 30px;
+    line-height: 0.1;
+    position: relative;
+    top: 2%;
+    font-size: 0.65em;
+}
+
+/* Next & previous buttons */
+.prev {
+  cursor: pointer;
+  position: relative;
+  bottom: 335px;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+    cursor: pointer;
+    position: relative;
+    bottom: 335px;
+    float: right;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  bottom: 70px;
+  border-bottom: -300px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+#Newscontainer{
+    max-width: 100%;
+    height: auto;
+}
+
+#Newscontainer a{
+    color: white;
+    text-decoration: underline;
+}
+
+/* About us */
+
+#info6 {
+    padding: 80px;
+}
+
+#info6 h{
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#info6 p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#servicesbar{
+    background-color: #222;
+    max-width: 100%;
+}
+
+#services1, #services2, #services3 {
+    text-align: center;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#yglobe {
+    max-width: 40%;
+    border: 1px solid #eee;
+}
+
+#ystar {
+    max-width: 40%;
+    border: 1px solid #eee;
+}
+
+#ydownload {
+    max-width: 40%;
+    border: 1px solid #eee;
+}
+
+.row, .row > .content2 {
+    padding: 3% 0.7% 4% 3.5%;
+}
+
+.content2 {
+    float: left;
+    width: 27%;
+}
+
+.row, .row > .content4 {
+    padding: 3% 3% 4% 0;
+}
+
+.content4 {
+    float: left;
+    width: 22%;
+}
+
+@media screen and (max-width: 1100px) {
+    .content2 {
+        width: 90%;
+    }
+    .content4 {
+        width: 100%;
+    }
+    #nav {
+        font-size:0.92em;
+        margin-left: -25px;
+    }
+    #nav li a {
+        padding: 13px 10px;
+    }
+    .menu {
+        width: 32px;
+        height: 28px;
+        margin-top: -7px;
+    }
+    #searches {
+        margin-top: 29px;
+        margin-left: 9px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #searches {
+        display: none;
+    }
+    #nav {
+        font-size:0.92em;
+        margin-left: 20px;
+    }
+    .dropdown-content {
+        margin-left: -20px;
+        margin-top: -3px;
+        width: 870px;
+    }
+    .content4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content2 {
+        width: 100%;
+    }
+    .content4 {
+        width: 100%;
+    }
+}
+
+/************************** Menu **************************/
+
+
+#bigcontainer{
+    margin: 50px;
+    margin-top: -5px;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: auto;
+}
+
+.title{
+    background-color: #546878;
+    width: 100%;
+    height: 80px;
+    color: white;
+    margin: 10px;
+    margin-top:30px;
+}
+
+.title h1{
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+.content{
+    background: black;
+    display: flex;
+    padding: 0 -8px;
+    justify-content: space-between;
+   margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+
+.contentitems{
+    margin: 0 30px;
+ color:white; 
+}
+
+
+
+.menuitem{
+   display: block;
+   height:200px;
+   width: 200px;
+   padding: 10px;
+}
+
+
+
+.menutitle{ position: relative;}
+
+.menuprice{ position: relative;}
+
+.shop-item-button{ background: grey; color: white;}
+
+.btn-order{ background: grey; color: white;}
+
+.content-section{
+	color: white;
+	margin: 1em;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-item-column{
+	color: white;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: white;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-remove{
+    background-color: grey;
+    color: white;
+}
+
+
+
+
+/************************** Contact us **************************/
+
+#info4{
+    color: white;
+    line-height: normal;
+    padding: 80px;
+}
+
+#info4 h{
+    font-size: 35px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+#info4 h1{
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+#info4 p{
+    font-size: 1em;
+}
+
+#map{
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+}
+
+.gmap_canvas {
+    width: 100%;
+}
+
+/* Sign up */
+
+#info8{
+    line-height: normal;
+    padding: 80px;
+}
+
+#info8 h{
+    font-size: 43px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#info8 p{
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.header1{
+    display: block;
+    color: #fff;
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.header2{
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.dateofbirth{
+    width: 225px;
+    height: 25px;
+    margin: 3px;
+    margin-top: 3px;
+}
+
+#field{
+    width: 385px;
+    height: 150px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.choose{
+    width: 165px;
+    height: 25px;
+    margin: 0px;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.hrline {
+    border-left: 3px solid white;
+    height: 700px;
+    position: absolute;
+    left: 655px;
+    top: 170px;
+}
+
+#info2{
+    margin: 60px;
+    max-width: 100%;
+    height: auto;
+    padding: 80px;
+    line-height: 2;
+    position: absolute;
+    left: 600px;
+    top: 40px;
+    overflow: auto;
+}
+
+#info2 h1 {
+    font-size: 1.2em;
+}
+
+#info2 p {
+    font-size: 0.9em;
+}
+
+/************************** Sign up **************************/
+
+form{
+     font-weight: 400;
+     padding: 10 px;
+     margin-top: 5 px;
+     color: white;
+     width: 100%;
+}
+
+#table1{
+     margin-left: 10%;
+     font-size: 150%;
+     margin-top: 5%;
+     margin-bottom: 3%;
+     border-spacing: 50px;
+}
+
+.table1 td{
+   
+}
+
+#table1 tr{
+   padding: 50px;
+   
+}
+
+h2{
+   background-color: #546878;
+   text-align: center;
+}
+
+h4{
+   text-align: center;
+}
+
+#btnform{
+        background-color: white;
+  	color: black;
+	margin-left: 600px;
+	margin-bottom: 40px;
+	font-size: 25px;
+   	font-weight: bold;
+	height: 60px;
+	width: 250px;	
+}
+
+#btnform:hover{
+	background-color: #546878;
+	color: white;
+	cursor: pointer;
+}
+
+.input{
+	height:30px;
+}
+
+/************************** Login **************************/
+
+#table2{
+     margin-left: 30%;
+     font-size: 150%;
+     margin-top: 5%;
+     margin-bottom: 3%;
+     border-spacing: 10px;
+}
+
+#h6{
+   margin-left: 40%;
+   color: white;
+   font-size: 20px;
+ 
+}
+
+#h6 a{
+    color: #546878;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+#h6 a:hover{
+          background-color: #546878;
+	  color: white;
+          cursor: pointer;
+}
+
+
+/************************* confirmation **************************/
+
+#containerC{
+	color: white;
+	text-align: center;
+	margin-top: 10%;
+}
+
+#p1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.p2{
+   font-size: 25px;
+}
+
+#btnC1{
+     color: black;
+     background-color: white;
+     margin-left: 250px;
+     margin-bottom: 40px;
+     margin-top: 70px;
+     font-size: 25px;
+     font-weight: bold;
+     height: 60px;
+     width: 250px;
+}
+
+#btnC2{
+     color: black;
+     background-color: white;
+     margin-left: 500px;
+     margin-bottom: 40px;
+     margin-top: 70px;
+     font-size: 25px;
+     font-weight: bold;
+     height: 60px;
+     width: 250px;
+}
+
+#btnC1:hover{
+	background-color: #546878;
+	color: white;
+	cursor: pointer;
+}
+
+#btnC2:hover{
+	background-color: #546878;
+	color: white;
+	cursor: pointer;
+}
+
+/************************ RateUs **************************/
+
+.containerR{
+	width: 100%;
+        color: white;
+ 
+}
+
+.containerR h3{
+      font-size: 25px;
+      color: white;
+      background-color: #546878;
+      text-align: left; 
+      text-indent: 5em; 
+}
+
+.inputR{
+       padding: 100px;
+       padding-left: 0px;
+       font-size: 20px;
+      
+}
+
+.contR{
+      margin-left:400px;
+      margin-bottom: 70px;
+}
+
+#btnRU{
+      color: black;
+     background-color: white;
+     margin-left: 600px;
+     margin-bottom: 60px;
+     margin-top: 70px;
+     font-size: 25px;
+     font-weight: bold;
+     height: 60px;
+     width: 250px;
+}
+
+#btnRU:hover{
+     background-color: #546878;
+     color: white;
+     cursor: pointer;
+}
+
+/************************ RateConfirm **************************/
+
+#containerRC{
+ 	width: 100%;
+        color: white;
+        margin-top: 200px;
+        text-align:center;
+}
+
+#pRC{
+   font-size: 50px;
+   text-align:center;
+}
+
+#pRC1{
+    font-size:30px;
+   }
+
+#pRC2{
+    font-size:20px;
+}
+
+#pRC2 a{
+       color: #546878;
+       font-weight: bold;
+       text-decoration:none;
+}
+
+#pRC2 a:hover{
+       background-color: #546878;
+       color: white;
+       cursor: pointer;
+}
+
+#btnRC{
+      color: black;
+     background-color: white;
+     margin-left: 600px;
+     margin-bottom: 40px;
+     margin-top: 70px;
+     font-size: 25px;
+     font-weight: bold;
+     height: 60px;
+     width: 250px;
+}
+
+#btnRC:hover{
+     background-color: #546878;
+     color: white;
+     cursor: pointer;
+}
+
+
